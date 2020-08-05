@@ -40,7 +40,7 @@ public class ProductService {
     }
 
     //Get Product based on Name
-    public List<Product> getProductByName( String name ) {
+    public Product getProductByName( String name ) {
         return productRepository.findByName(name);
     }
 
