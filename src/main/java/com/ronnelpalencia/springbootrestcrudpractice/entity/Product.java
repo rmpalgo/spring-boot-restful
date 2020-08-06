@@ -6,23 +6,21 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "Product_Table")
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private int quantity;
+    private int inventory;
     private double price;
 
     public Product() {
     }
 
-    public Product(int id, String name, int quantity, double price) {
+    public Product(int id, String name, int inventory, double price) {
         this.id = id;
         this.name = name;
-        this.quantity = quantity;
+        this.inventory = inventory;
         this.price = price;
     }
 
@@ -42,12 +40,12 @@ public class Product {
         this.name = name;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getInventory() {
+        return inventory;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setInventory(int inventory) {
+        this.inventory = inventory;
     }
 
     public double getPrice() {
