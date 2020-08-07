@@ -10,7 +10,7 @@ public class Product {
 
     @Id
     private int id;
-    private String name;
+    private String productName;
     private int inventory;
     private double price;
 
@@ -19,7 +19,7 @@ public class Product {
 
     public Product(int id, String name, int inventory, double price) {
         this.id = id;
-        this.name = name;
+        this.productName = name;
         this.inventory = inventory;
         this.price = price;
     }
@@ -32,12 +32,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public int getInventory() {

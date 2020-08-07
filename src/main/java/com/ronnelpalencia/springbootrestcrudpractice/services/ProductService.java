@@ -41,7 +41,7 @@ public class ProductService {
 
     //Get Product based on Name
     public Product getProductByName( String name ) {
-        return productRepository.findByName(name);
+        return productRepository.findByProductName(name);
     }
 
     //Delete Product
@@ -53,7 +53,7 @@ public class ProductService {
     //update Product
     public Product updateProduct(Product product) {
         Product existingProduct = productRepository.findById(product.getId()).orElse(null);
-        existingProduct.setName(product.getName());
+        existingProduct.setProductName(product.getProductName());
         existingProduct.setInventory(product.getInventory());
         existingProduct.setPrice(product.getPrice());
         return productRepository.save(existingProduct);
